@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Front-end utilities for Django developers</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <link rel="stylesheet" href="styles/reveal/reveal.css">
+    <link rel="stylesheet" href="styles/reveal/sky.css">
+    <link rel="stylesheet" href="styles/reveal/zenburn.css">
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+  </head>
+  <body>
+
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- Start -->
+        <section>
+          <h2>Front-end utilities</h2>
+          <h4>for Django developers</h4>
+
+          <div class="logos">
+            <img src="images/django-logo.png" alt="Django">
+            <img class="heart" src="images/heart.png" alt="loves">
+            <img src="images/html-logo.png" alt="HTML">
+            <img src="images/css-logo.png" alt="CSS">
+            <img src="images/js-logo.jpg" alt="Javascript">
+          </div>
+        </section>
+
+        <!-- Django Compressor -->
+        <section>
+          <section>
+            <h3>Django Compressor</h3>
+
+            <ul>
+              <li class="fragment fade-up">Compresses Javascript and CSS files</li>
+              <li class="fragment fade-left">Compiles dynamic files (Coffeescript, LESS, SASS, ...)</li>
+              <li class="fragment fade-right">Works offline and in-request </li>
+            </ul>
+          </section>
+          <section>
+            <h3>How to use it</h3>
+
+            <p>Installation</p>
+            <pre><code class="bash" data-trim>
+                pip install django_compressor
+            </code></pre>
+
+            <p>settings.py</p>
+            <pre><code class="python" data-trim>
+                INSTALLED_APPS = (
+  # other apps...
+  "compressor",
+)
+
+# other settings...
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders...
+    'compressor.finders.CompressorFinder',
+)
+            </code></pre>
+          </section>
+        </section>
+
+        <!-- Django Storages -->
+
+        <!-- Django Widget tweaks -->
+
+        <!-- DjangoJS -->
+
+        <!-- Django Premailer -->
+
+      </div>
+    </div>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/reveal/head.js"></script>
+    <script src="scripts/reveal/reveal.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
